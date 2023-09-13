@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="end">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       
+        *{
+            margin: 0;
+            padding: 0;
+        }
+   
+        .main{
+    height: 100vh;
+    width: 100%;
+    background-color: purple;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.box{
+    height: 200px;
+    width: 200px;
+    padding: 20px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: cyan;
+    border-radius: 25px;
+}
+    </style>
+
+
+    <script>
+       function izvaditVarduUzvardu() {
+    var vards = document.getElementById("vards").value;
+    var uzvards = document.getElementById("uzvards").value;
+
+
+    var pilnsVardsUzvards = vards + " " + uzvards;
+
+
+    document.getElementById("izvade").innerHTML = pilnsVardsUzvards;
+}
+
+
+    </script>
+
+
+</head>
+<body>
+    <div class="main">
+        <div class="box">
+        <form>
+        <label for="vards">Ievadiet vārdu:</label>
+        <input type="text" id="vards">
+        <br>
+        <label for="uzvards">Ievadiet uzvārdu:</label>
+        <input type="text" id="uzvards">
+        <br>
+        <button type="button" onclick="izvaditVarduUzvardu()">Izvadīt</button>
+    </form>
+
+
+    <p>Izvadītais vārds un uzvārds: <span id="izvade"></span></p>
+        </div>
+    </div>
+</body>
